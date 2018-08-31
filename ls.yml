@@ -4,4 +4,9 @@
   - name: list files in folder
     command: ls -lai /tmp/
     register: tmp_list_file
+  - name: get /use/aa.txt contain
+    command: cat /home/user/aa.txt
+    register: result
+  - name: print result
+      debug: var=result
   
