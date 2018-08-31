@@ -8,5 +8,5 @@
     command: cat /home/user/aa.txt
     register: result
   - name: print result
-      debug: var=result
+    debug: var=result
   
