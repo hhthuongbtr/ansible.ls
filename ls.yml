@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: list files in folder
+    command: ls -lai /tmp/
+    register: tmp_list_file
+  
