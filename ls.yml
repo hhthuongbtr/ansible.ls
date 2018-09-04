@@ -5,6 +5,6 @@
     command: ls -lai /tmp/
     register: tmp_list_file
   - name: get /use/aa.txt contain
-    command: cat /home/user/aa.txt
+    command: cat /root/.bash_profile
     register: result
   
