@@ -5,9 +5,12 @@
   - name: list files on folder
     command: ls -lai /tmp/
     ignore_errors: yes
+    check_mode: no
   - name: get /use/aa.txt contain
     command: cat /root/.bash_profile
     ignore_errors: yes
+    check_mode: no
   - name: Get memory status.
     shell: free -m
     ignore_errors: yes
+    check_mode: no
