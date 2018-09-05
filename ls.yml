@@ -14,3 +14,7 @@
     shell: free -m
     ignore_errors: yes
     check_mode: no
+  - name: this task will be skipped in check mode
+    git:
+      repo: https://github.com/hhthuongbtr/ansible.ls/blob/master/ls.yml
+      dest: /tmp/
