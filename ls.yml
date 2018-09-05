@@ -2,10 +2,9 @@
 - hosts: all
   gather_facts: no
   tasks:
-  - name: list files in folder
+  - name: list files on folder
     command: ls -lai /tmp/
-    register: tmp_list_file
   - name: get /use/aa.txt contain
     command: cat /root/.bash_profile
-    register: result
-  
+  - name: Get memory status.
+    shell: free -m
