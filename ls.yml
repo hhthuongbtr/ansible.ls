@@ -16,5 +16,5 @@
     check_mode: no
   - name: this task will be skipped in check mode
     git:
-      repo: https://github.com/hhthuongbtr/ansible.ls/blob/master/ls.yml
+      repo: https://github.com/hhthuongbtr/ansible.ls.git
       dest: /tmp/
