@@ -18,7 +18,7 @@
     yum: pkg=iptables-services state=present
 
   - name: upload firewall config
-    template: src={{ roles_path }}/{{ products }}/templates/firewall.j2 dest=/etc/sysconfig/iptables
+    template: src={{ playbook_dir }}/templates/firewall.j2 dest=/etc/sysconfig/iptables
      backup=yes
      mode=644
     notify:
@@ -42,7 +42,7 @@
       mode: 0775
 
   - name: upload nginx config
-    template: src={{ roles_path }}/{{ products }}/templates/nginx.j2 dest=/etc/nginx/conf.d/local.conf
+    template: src={{ playbook_dir }}/templates/nginx.j2 dest=/etc/nginx/conf.d/local.conf
      backup=yes
      owner=nginx
      group=nginx
