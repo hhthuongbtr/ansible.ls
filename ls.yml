@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  gather_facts: no
   tasks:
   - name: list files on folder
     command: ls -lai /tmp/
