@@ -5,7 +5,7 @@
   - ../vars/nginx.ok.yml
 
   tasks:
-  - include: ../tasks/nginx.ok.yml
+  - include: ../tasks/nginx.yml
   
   handlers:
   - include: ../handlers/nginx.yml
