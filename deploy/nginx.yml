@@ -2,7 +2,7 @@
 - hosts: all
   vars_files:
   - ../vars/common.yml
-  - ../vars/nginx.yml
+  - ../vars/nginx.ok.yml
 
   tasks:
   - include: tasks/nginx.ok.yml
