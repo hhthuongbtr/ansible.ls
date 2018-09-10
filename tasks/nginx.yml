@@ -18,7 +18,7 @@
     yum: pkg=iptables-services state=present
 
   - name: upload firewall config
-    template: src={{ playbook_dir }}/templates/firewall.j2 dest=/etc/sysconfig/iptables
+    template: src={{ playbook_dir.split("/")[0:-1]|join("/") }}/templates/firewall.j2 dest=/etc/sysconfig/iptables
      backup=yes
      mode=644
     notify:
@@ -35,14 +35,14 @@
 
   - name: Create nginx log /var/log/nginx
     file:
-      path: {{ nginx_log_path }}"
+      path: "{{ nginx_log_path }}"
       state: directory
       owner: "{{ ngix_user }}"
       group: "{{ nginx_group }}"
       mode: 0775
 
   - name: upload nginx config
-    template: src={{ playbook_dir }}/templates/nginx.j2 dest=/etc/nginx/conf.d/local.conf
+    template: src={{ playbook_dir.split("/")[0:-1]|join("/") }}/templates/nginx.j2 dest=/etc/nginx/conf.d/local.conf
      backup=yes
      owner=nginx
      group=nginx
