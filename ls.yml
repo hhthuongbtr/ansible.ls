@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
   - name: list files on folder
-    command: ls -lai /tmp/
+    command: ls -lai /home
     ignore_errors: yes
   - name: get /use/aa.txt contain
     command: cat /root/.bash_profile
@@ -10,7 +10,3 @@
   - name: Get memory status.
     shell: free -m
     ignore_errors: yes
-  - name: clone git task
-    git:
-      repo: https://github.com/hhthuongbtr/ansible.ls.git
-      dest: /tmp/
