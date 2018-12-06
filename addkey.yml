@@ -10,4 +10,4 @@
   - name: create user test
     user: name=test groups=wheel state=present
   - name: USER key test
-    authorized_key: user="test" key="{{ lookup('file', '{{ playbook_dir.split("/")[0:-1]|join("/") }}/keys/test') }}" state=present
+    authorized_key: user="test" key="{{ lookup('file', '{{ playbook_dir.split("/")[0:-1]|join("/") }}/templates/keys/test') }}" state=present
