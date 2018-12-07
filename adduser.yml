@@ -1,0 +1,9 @@
+---
+- gather_facts: false
+  hosts: all
+  sudo: yes
+  tasks:
+  - name: create user test
+    user: name=test groups=wheel state=present
+  - name: USER key test
+    authorized_key: user="test" key="{{ lookup('file', '{{ playbook_dir }}/templates/keys/test') }}" state=present
