@@ -1,0 +1,11 @@
+---
+  - name: yum telnet
+    yum: pkg=telnet state=present
+
+  - name: yum tcpdump
+    yum: pkg=tcpdump state=present
+
+
+  - name: yum net-tools
+    yum: pkg=net-tools state=present
+  
