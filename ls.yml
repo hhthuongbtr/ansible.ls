@@ -9,4 +9,4 @@
     ignore_errors: yes
   - name: Get memory status.
     shell: free -m
-    ignore_errors: yes
+    ignore_errors: no
